@@ -10,6 +10,8 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundColor: '#fff',
+    color: 'black'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -23,16 +25,14 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.root}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            News
+            Kicks
           </Typography>
           <ShoppingCartIcon color="inherit" />
         </Toolbar>
       </AppBar>
-    </div>
   );
 }
 
