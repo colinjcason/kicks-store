@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Box from '@material-ui/core/Box';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    fontSize: '20px',
   },
 }));
 
@@ -27,9 +28,9 @@ export default function Header() {
   return (
       <AppBar position="static" className={classes.root}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+          <Box className={classes.title}>
             Kicks
-          </Typography>
+          </Box>
           <ShoppingCartIcon color="inherit" />
         </Toolbar>
       </AppBar>
