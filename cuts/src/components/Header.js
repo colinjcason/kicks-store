@@ -4,8 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Box from '@material-ui/core/Box';
-
-
+import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,9 +28,11 @@ export default function Header() {
       <AppBar position="static" className={classes.root}>
         <Toolbar>
           <Box className={classes.title}>
-            Kicks
+            Shop
           </Box>
-          <ShoppingCartIcon color="inherit" />
+          <IconButton>
+            <ShoppingCartIcon style={{color: 'black'}} />
+          </IconButton>
         </Toolbar>
       </AppBar>
   );

@@ -13,14 +13,31 @@ const useStyles = makeStyles({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
-    alignItems: 'center'
+    flexDirection: 'column',
   },
   header: {
-    position: 'relative',
-    // display: 'flex',
-    // justifyContent: 'center',
-    fontSize: '4rem'
-  }
+    fontSize: '4rem',
+  },
+  content: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '20px',
+  },
+  subHeader: {
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    marginBottom: '15px',
+  },
+  demo: {
+    backgroundImage: 'url(https://images.unsplash.com/photo-1529810313688-44ea1c2d81d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '350px',
+    margin: '60px'
+  },
+  contact: {
+    height: '500px',
+  },
 });
 
 function App() {
@@ -37,14 +54,33 @@ function App() {
           </Box>
         </Box>
 
-        <Grid item container>
+        <Grid item container className={classes.content} align='center'>
+        <Grid item xs={4} />
+          <Grid item xs={4} className={classes.subHeader}>
+            Shop
+          </Grid>
+          <Grid xs={4} />
+
           <Grid item xs={1} sm={0}/>
-          <Grid item xs={10} sm={12} >
+          <Grid item xs={10} sm={12} className={classes.products}>
             <Content />
           </Grid>
           <Grid item xs={1} sm={0}/>
-        </Grid>        
-      </Grid>      
+        </Grid>
+
+        {/* <Grid item container justify='center' align='center'>
+          <Grid item xs={4} style={{backgroundColor: 'grey'}}/>
+          <Grid item xs={4} className={classes.subHeader}>
+            Shop Now
+          </Grid>
+          <Grid xs={4} style={{backgroundColor: 'grey'}}/>
+        </Grid> */}
+
+        <Box className={classes.demo}></Box>
+
+        <Box className={classes.contact}></Box>
+
+      </Grid>
   );
 }
 
