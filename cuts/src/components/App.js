@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     marginBottom: '15px',
   },
   demo: {
-    backgroundImage: 'url(https://images.unsplash.com/photo-1529810313688-44ea1c2d81d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9)',
+    backgroundImage: 'url(https://images.unsplash.com/photo-1523646745854-e018a9bcc73c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '350px',
