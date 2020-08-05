@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 export default function ProductCard({ imgSrc }) {
   const classes = useStyles();
   return (
-    <Card variant='outlined' className={classes.root}>
+    <Card className={classes.root}>
         <CardMedia 
           className={classes.media}
           image={imgSrc}
